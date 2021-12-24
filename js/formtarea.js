@@ -1,13 +1,3 @@
-import { TaskBoard } from "./taskboard.js";
-import { Tarea } from "./tarea.js";
-import { createDiv } from "./creatediv.js";
-
-const taskBoard = new TaskBoard([]);
-taskBoard.printTasks();
-
-console.log('Probando desde consola');
-console.log(taskBoard.findAllItems());
-
 const formTarea = document.getElementById('form-tarea');
 const newTitle = document.getElementById('input-titulo');
 const newLocation = document.getElementById('input-ubicacion');
@@ -30,9 +20,3 @@ formTarea.addEventListener ('submit', (event) => {
     console.log(taskBoard.findAllItems());
     createDiv(newTask);
 } );
-
-
-
-// const nuevaTarea = new Tarea('title', 'location', 'date', 'hour','note');
-// taskBoard.addTask(nuevaTarea);
-
