@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Tareas por hacer</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+
+<div class="container col-lg-12 "></div>
+    
+
+
+    <div class="container col-lg-12 block">
+        
+        <div class="row col-xs-6 block2 bg-primary center">
+            
+            <form class="form-horizontal" id="form-tarea">
+            <div class="form-group" >
+                <label class="control-label col-sm-3"  for="titulo">Título</label>
+                <div class="col-sm-8 col-xs-12">
+                    <input autocomplete="off" type="text" name="titulo" id="input-titulo" class="form-control"/>
+                </div>
+            </div>  
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="ubicacion">Ubicación</label>
+                <div class="col-sm-8 col-xs-12">            
+                    <input autocomplete="off" type="text" name="ubicacion" id="input-ubicacion" class="form-control"/> 
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="fecha">Fecha</label>
+                <div class="col-sm-8 col-xs-12">            
+                    <input autocomplete="off" type="date" name="fecha" id="input-fecha" class="form-control"/> 
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="hora">Hora</label>
+                <div class="col-sm-8 col-xs-12">            
+                    <input autocomplete="off" type="time" name="hora" id="input-hora" class="form-control"/> 
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="notas">Notas</label>
+                <div class="col-sm-8 col-xs-12">            
+                    <input autocomplete="off" type="text" name="notas" id="input-notas" class="form-control"/> 
+                </div>
+            </div>
+            <div class="form-group"> 
+                <div class="col-sm-offset-2 col-sm-8">  
+                    <button id="agregar">Agregar</button>
+                </div>
+            </div>     
+        </form>
+        </div>
+            
+    </div><!-- /.container -->
+
+    <div class="d-flex justify-content-around col-lg-12" id="nuevas-tareas"></div>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="module" src="./js/index.js"></script>
+    
+</body>
+</html>
