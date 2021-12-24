@@ -1,18 +1,30 @@
+import { createDiv } from "./creatediv.js";
 import { Tarea } from "./tarea.js";
 
 let totalTasks = 1;
 export class TaskBoard {
 
-    constructor(tareas) {
-        this.tareas = tareas;
+    constructor() {
+        this.tareas = JSON.parse(localStorage.getItem('tareas')) || [];
+    }
+
+    printTasks(){
+        if (this.tareas){
+            for (let i = 0; i<=this.tareas.length-1; i++){
+                createDiv(this.tareas[i]);
+            }
+        } else {
+            console.log("Taskboard vacío");
+        }
     }
 
     findAllItems() {
         return this.tareas;
     }
 
-    addTask(newTask) {
-        this.tareas.push( newTask );
+    addTask(nuevaTarea) {
+        this.tareas.push( nuevaTarea );
+        localStorage.setItem('tareas', JSON.stringify(this.tareas));
     }
 
     newTask(titulo, ubicacion, fecha, hora, notas){
