@@ -58,7 +58,6 @@ export class TaskBoard {
     }
 
     deleteTask( taskName ) {
-
         const task = this.findByTitle( taskName );
         const index = this.tareas.indexOf(task);
         this.lista.splice( index, 1 );
