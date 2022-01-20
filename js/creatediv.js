@@ -2,7 +2,7 @@
 export const createDiv = (newTask) => {
 
     
-    $(`<div class='nueva-tarea'>
+    $(`<div class='nueva-tarea glass'>
             <h2>
                 ${newTask.titulo}
             </h2> 
@@ -26,6 +26,8 @@ export const createDiv = (newTask) => {
                 <i class="fas fa-sticky-note"></i>
                 ${newTask.notas}
             </p>
+
+            <button class="boton_borrar glass" id="${newTask.id}">X</button>
 
         </div>`).appendTo("#nuevas-tareas");
 }

@@ -1,35 +1,155 @@
-*{
-    margin:0;
-    padding:0;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
 }
+
 body {
-    padding-top: 20px;
-  }   
+  background-image: linear-gradient(to right top, #b7b19c, #c3bda9, #d0cab6, #dcd6c3, #e9e3d1, #ede4cd, #f2e4c9, #f7e4c5, #f7d7af, #f9c99c, #fcba8b, #ffaa7d);
+  background-attachment: fixed;
+  font-family: 'Nunito', sans-serif;
+  color:rgb(68, 68, 68);
+  height: 100vh;
+  margin: 0;
+  place-items: center;
+}
 
-  .block {
-    height: 50rem;
-    padding-top: 15rem;  
-    background-color: #3D28A6;
-  }  
+.block {
+  display: flex;
+  height: 50rem;
+  justify-content: center;
+  align-items: center;
+}
 
-  .block2 {
-    min-height: 160px;
-    padding-top: 15px; 
-  } 
+.form-input{
+  display: flex;
+  align-items: center;
+  height: 25em;
+  color:rgb(139, 100, 48);
+  padding-top: 2rem;
+  width: 30em;
+  justify-content: space-around;
+  align-content: space-around;
+}
 
-  .center {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;  
-  }
+.form-horizontal{
+  max-width:30em;
+}
 
-  .nueva-tarea{
-    width: 20em;
-    display:inline-block;
-    background-color: white;
-    border-radius: 15px 50px;
-    box-shadow: 0 6px 20px 0 rgba(125, 141, 170, 0.664);
-    padding: 3em;
-    margin: 2em;
-  }
+
+.form_boton--container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.form_boton{
+  padding: 1rem;
+  width: 10rem;
+  color:rgb(255, 255, 255);
+  font-weight: 800;
+  font-size: 1em;
+  text-transform: uppercase;
+  background-color: #B7B19c;
+  border-radius: 8px;
+  border: none;
+}
+
+.form_boton:hover{
+  background-color: #FFAA7D;
+}
+
+
+.tareas-container{
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+
+.glass {
+    background: rgba( 255, 255, 255, 0.10 );
+    box-shadow: 0 6px 20px 0 rgba(125, 141, 170, 0.267);
+    -webkit-backdrop-filter: blur( 5px );
+            backdrop-filter: blur( 4.5px );
+    border-radius: 16px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.nueva-tarea {
+  width: 23em;
+  display: flexbox;
+  padding: 3em;
+  margin: 2em;
+  background-color: rgba(255, 245, 238, 0.301);
+  font-weight: 600;
+  color: gray;
+}
+
+.nueva-tarea h2{
+  font-family: Righteous, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  color:rgb(139, 100, 48);
+  padding-bottom: .8rem;
+}
+
+.nueva-tarea i{
+  padding-right: .5rem;
+}
+
+
+.fas{
+  color: #c26b3d;
+}
+
+.boton_borrar{
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  transform: translate(25.8rem, -17.8em);
+  font-family: 'Nunito', sans-serif;
+  color: #c26b3d;
+  
+}
+
+.boton_borrar:hover{
+  color: white;
+  background-color: #f7953a77;
+}
+
+
+.bubble {
+  border-radius: 50%;
+  position: absolute;
+}
+
+.bubble-one {
+  height: 160px;
+  left: 18rem;
+  top: 15rem;
+  width: 160px;
+}
+
+.bubble-two {
+  height: 230px;
+  right: 10rem;
+  top: -50px;
+  width: 230px;
+}
+
+.bubble-three {
+  height: 50px;
+  right: 450px;
+  top: -20px;
+  width: 50px;
+}
+
+.bubble-four {
+  bottom: 40px;
+  height: 100px;
+  left: -30px;
+  width: 100px;
+}
+

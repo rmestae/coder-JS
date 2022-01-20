@@ -1,10 +1,15 @@
 export class Tarea {
-    constructor(titulo, ubicacion, fecha, hora, notas) {
+    constructor(id, titulo, ubicacion, fecha, hora, notas) {
+        this.id = id;
         this.titulo = titulo;
         this.ubicacion = ubicacion;
         this.fecha = fecha;
         this.hora = hora;
         this.notas = notas;
+    }
+
+    getId() {
+        return this.id;
     }
 
     getTitle() {

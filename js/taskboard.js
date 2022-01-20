@@ -27,20 +27,18 @@ export class TaskBoard {
         localStorage.setItem('tareas', JSON.stringify(this.tareas));
     }
 
-    newTask(titulo, ubicacion, fecha, hora, notas){
-    
-        const nuevaTarea = new Tarea (titulo, ubicacion, fecha, hora, notas);
+    newTask(id, titulo, ubicacion, fecha, hora, notas){
+        const nuevaTarea = new Tarea (id, titulo, ubicacion, fecha, hora, notas);
         this.addTask(nuevaTarea);
-        alert(`Tarea Nueva ${totalTasks} :'${titulo}' ha sido creada exitosamente.`)
         totalTasks++;
     }
 
-    findByTitle( taskName ) {
+    findById( taskId ) {
 
-        const task = this.tareas.find( element => element.titulo === taskName )
+        const task = this.tareas.find( element => element.id === taskId )
 
         if ( !task ) {
-            throw new Error('No existe la tarea ' + taskName)
+            throw new Error('No existe la tarea ' + taskId)
         }
 
         return task;
@@ -57,10 +55,10 @@ export class TaskBoard {
  
     }
 
-    deleteTask( taskName ) {
-        const task = this.findByTitle( taskName );
+    deleteTask( taskId ) {
+        const task = this.findById( taskId );
         const index = this.tareas.indexOf(task);
-        this.lista.splice( index, 1 );
+        this.tareas.splice( index, 1 );
     }
 
 }

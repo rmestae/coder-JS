@@ -7,21 +7,31 @@ taskBoard.printTasks();
 
 console.log('Probando desde consola');
 console.log(taskBoard.findAllItems());
+let idBoton = JSON.parse(localStorage.getItem('idBoton')) || 0;
 
-$("#agregar").click ( (event) => {
+
+$("#boton_agregar").click ( (event) => {
 
     event.preventDefault();
+    const id = idBoton;
     const title = $('#input-titulo').val();
     const location = $('#input-ubicacion').val();
     const date = $('#input-fecha').val();
     const hour = $('#input-hora').val();
     const note = $('#input-notas').val();
 
-    const newTask = new Tarea(title, location, date, hour,note);
+    const newTask = new Tarea(id, title, location, date, hour, note);
+    idBoton++;
+    localStorage.setItem('idBoton', JSON.stringify(idBoton));
     taskBoard.addTask(newTask);
     console.log(taskBoard.findAllItems());
     createDiv(newTask);
+    // $("#form-tarea")[0].reset();
 } );
 
-cd
+$("#boton_limpiar--todo").click ( () => {
+    localStorage.clear();
+})
+
+
 
