@@ -1,8 +1,9 @@
+import { taskBoard } from "./index.js";
+import { TaskBoard } from "./taskboard.js";
 
 export const createDiv = (newTask) => {
 
-    
-    $(`<div class='nueva-tarea glass'>
+    $(`<div class="nueva-tarea glass" id="tarea-${newTask.id}">
             <h2>
                 ${newTask.titulo}
             </h2> 
@@ -27,7 +28,20 @@ export const createDiv = (newTask) => {
                 ${newTask.notas}
             </p>
 
-            <button class="boton_borrar glass" id="${newTask.id}">X</button>
+            <button id="boton_eliminarTarea-${newTask.id}" class="boton_borrar glass">X</button>
 
-        </div>`).appendTo("#nuevas-tareas");
+        </div>`).appendTo("#nuevas-tareas").fadeIn();
+
+        $(`#boton_eliminarTarea-${newTask.id}`).on ("click", () => {
+
+            $(`#tarea-${newTask.id}`).toggle(
+                "scale",
+                
+                function(){
+                    console.log("eliminar id " + newTask.id );
+                    taskBoard.deleteTask(newTask.id);
+                    $(`#tarea-${newTask.id}`).remove();
+                }
+            );
+        })
 }

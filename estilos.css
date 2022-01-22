@@ -46,6 +46,7 @@ body {
 
 .form_boton{
   padding: 1rem;
+  margin: .5rem;
   width: 10rem;
   color:rgb(255, 255, 255);
   font-weight: 800;
@@ -85,6 +86,7 @@ body {
   background-color: rgba(255, 245, 238, 0.301);
   font-weight: 600;
   color: gray;
+  display: none;
 }
 
 .nueva-tarea h2{
