@@ -30,7 +30,7 @@ export const createDiv = (newTask) => {
 
             <button id="boton_eliminarTarea-${newTask.id}" class="boton_borrar glass">X</button>
 
-        </div>`).appendTo("#nuevas-tareas").fadeIn();
+        </div>`).appendTo("#nuevas-tareas").slideDown();
 
         $(`#boton_eliminarTarea-${newTask.id}`).on ("click", () => {
 
